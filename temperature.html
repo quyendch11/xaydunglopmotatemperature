@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  class Temperature{
+      C;
+      contrcutor(C){
+          this.C = C;
+      }
+      setC(C) {
+          if (C > -273) {
+              this.C = C;
+          }
+            else {
+                alert("gia tri ko ton tai");
+          }
+      }
+      getC(){
+          return this.C;
+      }
+      getF(){
+          let F;
+          F = this.C*1.8 + 32;
+         return F ;
+      }
+      getKavin(){
+          let K;
+          K = this.C + 273.15;
+          return K;
+      }
+  }
+  let doC = new Temperature();
+  doC.setC(25);
+  document.write("gia tri " +  doC.getC() + " do C chuyen doi sang do F la: " + doC.getF() + "<br>");
+  document.write("gia tri " +  doC.getC() + " do C chuyen doi sang do Kavin la: " + doC.getKavin())
+
+</script>
+</body>
+</html>
